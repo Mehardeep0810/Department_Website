@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form - Department of Computer Applications - Chitkara University</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Chitkara University Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://www.chitkara.edu.in/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.chitkara.edu.in/favicon.ico">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="container nav-container">
+            <div class="logo-container">
+                <img src="images/logo1.png" alt="Chitkara University Logo" class="logo-img">
+                <div class="logo-text">Computer Applications</div>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                  <li><a href="admission.html" class="active">Admissions</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Admission Form</h1>
+            <p>Begin your journey with Chitkara University. Fill out the form below to apply for admission to our Computer Applications programs.</p>
+        </div>
+    </section>
+    
+    <div class="container">
+        <div class="success-message" id="successMessage">
+            <h2>Thank you for your application!</h2>
+            <p>We have received your admission form and will contact you soon.</p>
+        </div>
+        
+        <div class="form-container">
+            <form id="admissionForm">
+                <!-- Personal Information Section -->
+                <div class="form-section">
+                    <h2 class="section-title">Personal Information</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName" class="required">First Name</label>
+                            <input type="text" id="firstName" placeholder="Enter Your First Name" pattern="[A-Za-z\s]{2,}" 
+                                   title="First name must contain only letters and be at least 2 characters long" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName" class="required">Last Name</label>
+                            <input type="text" id="lastName" placeholder="Enter Your Last Name" pattern="[A-Za-z\s]{2,}" 
+                                   title="Last name must contain only letters and be at least 2 characters long" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email" class="required">Email Address</label>
+                            <input type="email" id="email" placeholder="Enter Your Email" title="Please enter a valid email address" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="required">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="Enter Your Phone no" pattern="[0-9]{10}" 
+                                   title="Please enter a valid 10-digit phone number" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="dob" class="required">Date of Birth</label>
+                            <input type="date" id="dob" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="required">Gender</label>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" id="male" name="gender" value="male" required>
+                                    <label for="male">Male</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="female" name="gender" value="female">
+                                    <label for="female">Female</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" id="other" name="gender" value="other">
+                                    <label for="other">Other</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label for="address" class="required">Permanent Address</label>
+                            <textarea id="address" class="form-control" minlength="20" 
+                                      title="Address must be at least 20 characters long" required></textarea>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Academic Information Section -->
+                <div class="form-section">
+                    <h2 class="section-title">Academic Information</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="qualification" class="required">Highest Qualification</label>
+                            <select id="qualification" class="form-control" required>
+                                <option value="">Select Qualification</option>
+                                <option value="highschool">High School</option>
+                                <option value="intermediate">Intermediate</option>
+                                <option value="bachelor">Bachelor's Degree</option>
+                                <option value="master">Master's Degree</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="percentage" class="required">Percentage/CGPA</label>
+                            <input type="text" id="percentage" placeholder="Enter Your (Percentage/CGPA)" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="school" class="required">School/College Name</label>
+                            <input type="text" id="school" class="form-control" placeholder="Enter Your (School/College Name)" minlength="2" 
+                                   title="School/College name is required" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="year" class="required">Year of Passing</label>
+                            <input type="number" id="year" placeholder="Enter Year" class="form-control" min="1980" max="2030" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course Selection Section -->
+                <div class="form-section">
+                    <h2 class="section-title">Course Selection</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="course" class="required">Preferred Course</label>
+                            <select id="course" class="form-control" required>
+                                <option value="">Select Course</option>
+                                <option value="bca">BCA</option>
+                                <option value="mca">MCA</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="specialization" class="required">Specialization</label>
+                            <select id="specialization" class="form-control" required>
+                                <option value="">Select Specialization</option>
+                                <option value="AIML">BCA (Artificial Intelligence & Machine Learning)</option>
+                                <option value="cc">MCA (Cloud Computing)</option>
+                                <option value="cs">MCA (Cybersecurity)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="campus" class="required">Preferred Campus</label>
+                            <select id="campus" class="form-control" required>
+                                <option value="">Select Campus</option>
+                                <option value="himachal">Himachal Pradesh</option>
+                                <option value="rajpura">Punjab</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="intake" class="required">Preferred Intake</label>
+                            <select id="intake" class="form-control" required>
+                                <option value="">Select Intake</option>
+                                <option value="spring">Spring 2025</option>
+                                <option value="summer">Summer 2025</option>
+                                <option value="fall">Fall 2025</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Documents Upload Section -->
+                <div class="form-section">
+                    <h2 class="section-title">Documents Upload</h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="photo" class="required">Passport Size Photo</label>
+                            <input type="file" id="photo" class="form-control" accept="image/*" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="marksheet" class="required">Marksheet</label>
+                            <input type="file" id="marksheet" class="form-control" accept=".pdf,.jpg,.png" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="idproof">ID Proof (Aadhar/Passport)</label>
+                            <input type="file" id="idproof" class="form-control" accept=".pdf,.jpg,.png">
+                        </div>
+                        <div class="form-group">
+                            <label for="signature" class="required">Signature</label>
+                            <input type="file" id="signature" class="form-control" accept="image/*" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Declaration Section -->
+                <div class="form-section">
+                    <h2 class="section-title">Declaration</h2>
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="declaration" required>
+                                <label for="declaration" class="required">I hereby declare that all the information provided in this form is true and correct to the best of my knowledge. I understand that any false information may lead to cancellation of my admission.</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="updates">
+                                <label for="updates">I would like to receive updates about courses, events, and other information from Chitkara University.</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Form Actions -->
+                <div class="form-actions">
+                    <button type="reset" class="btn btn-secondary">Reset Form</button>
+                    <button type="submit" class="btn btn-primary">Submit Application</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Computer Applications</h3>
+                    <p>Department of Computer Applications at Chitkara University, dedicated to excellence in education and research in the field of computing.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="#">Faculty</a></li>
+                        <li><a href="admission.html">Admissions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Chitkara University, Patiala</li>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> department@chitkara.edu.in</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Department of Computer Applications, Chitkara University. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
