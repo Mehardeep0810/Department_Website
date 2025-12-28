@@ -143,20 +143,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* Events Section */}
-      <section id="events-section" className="events-section section-padding">
-        <div className="container">
-          <h2 className="section-title">Upcoming Events</h2>
-          <p>Stay tuned for workshops, seminars, and conferences hosted by our department.</p>
-          <ul>
-            <li>📅 Tech Workshop - Jan 15, 2026</li>
-            <li>📅 AI Seminar - Feb 10, 2026</li>
-            <li>📅 Career Fair - Mar 5, 2026</li>
-          </ul>
-        </div>
-      </section>
-
+      
       {/* Stats Section */}
       <section className="stats-section">
         <div className="container stats-grid">
@@ -217,3 +204,4 @@ const Home = () => {
 };
 
 export default Home;
+
