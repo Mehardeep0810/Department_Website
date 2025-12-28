@@ -12,6 +12,7 @@ const Header = () => {
 
       <nav>
          <NavLink to="/home">Home</NavLink>
+         <NavLink to="/events">Events</NavLink>
         <NavLink to="/admissions">Admissions</NavLink>
         <NavLink to="/faculty">Faculty</NavLink>
         
@@ -21,3 +22,4 @@ const Header = () => {
 };
 
 export default Header;
+
