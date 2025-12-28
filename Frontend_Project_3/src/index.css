@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #eef1f5;
+  color: #333;
+}
+
+
+.form-header nav a.active {
+  font-weight: 700;
+  text-decoration: underline;
+}

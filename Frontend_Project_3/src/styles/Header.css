@@ -1,0 +1,32 @@
+.form-header {
+  background: #d23b20;
+  color: white;
+  padding: 16px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-logo {
+  width: 45px;
+  height: 45px;
+}
+
+.form-header nav a {
+  color: #e0e0e0;
+  margin-left: 24px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.form-header nav a.active {
+  color: white;
+  font-weight: 700;
+  text-decoration: underline;
+}
